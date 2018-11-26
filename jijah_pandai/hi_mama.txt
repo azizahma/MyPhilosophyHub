@@ -1,0 +1,30 @@
+Friday, 2nd Nov 2018
+https://www.entrepreneur.com/article/304290
+https://www.oberlo.com/blog/best-business-books-entrepreneurs
+https://images.template.net/wp-content/uploads/2015/08/New-Business-Proposal-Format-Download.pdf
+Doing:
+1. Writing Start-Up Business Plan - reference 'The Small Business Start-Up Workbook
+2. configuring Django app - https://github.com/cromox1/Django/blob/master/setup_Django_app_part1.pdf
+
+Friday, 9th Nov 2018
+1. Start-Up Business Plan on the way - on the First Chapter exercise
+2. configuring Django app - continuing Part 1 from last week - basic polls app done - https://docs.djangoproject.com/en/2.1/intro/tutorial01/
+SUMMARY
+Django is a Python framework (not library) for creating websites.
+In an environment where you have defined a Django project, you will need to do the configurations (ie.the project setting) and creating applications (eg.polls - one basic app that has been done here).
+A defined project would also have a script - manage.py, that will assist in starting an app (startapp), reload website, create superuser (createsuperuser), and etc (to check: python manage.py --help).
+For project setting, we can set up some specialised database that we prefer to use in the project - because we might be more familiar using SQL command compared to SQLite (which is the default).
+For this we must include the name of the database to use in setting.py file (in the project dir).
+Or else, a default database would be used - in this case db.sqlite3 - which initially, is empty - so we cannot perform eg. createsuperuser, before we get some tables done.
+To create tables in the database (in this case db.sqlite3) we run a command python3 manage.py migrate - where it would create tables for some services that are available - in this case, admin, auth, contentypes and sessions.
+Now you can create a superuser login by running python3 manage.py createsuperuser, so that in the tables created the information asked for creating the superuser is stored.
+So if you go to the url http://myphilosophyhub.pythonanywhere.com/admin/ there will be a login screen.
+We have also started a basic polls app where a command python3 manage.py startapp polls was used.
+We need to put some settings in polls/views.py and polls/urls.py files (these files as created by the command python3 manage.py startapp polls)
+--- walla you will have a first view at this url: http://myphilosophyhub.pythonanywhere.com/polls/
+Okay - but what we must understand here is how the redirection works - ie. let's say what to be viewed on the (prime) site itself - http://myphilosophyhub.pythonanywhere.com/
+That you must edit the /home/myphilosophyhub/myphilosophyhub/myphilosophyhub/urls.py - the last part urlpatterns=[  ] (see the file).
+
+Thursday, 22nd November 2018
+1. Today I am starting Chapter2 of the startup workbook.
+2. configuring Django ...
